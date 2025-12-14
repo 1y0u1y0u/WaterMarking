@@ -1,0 +1,8 @@
+# Core numerical computing
+numpy>=1.21
+
+# Image processing (BGR images, JPEG compression, noise simulation)
+opencv-python>=4.7
+
+# YAML configuration loader
+pyyaml>=6.0

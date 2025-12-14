@@ -103,7 +103,7 @@ Each module:
 ---
 
 ## 5. Project Structure
-
+```
 digital-watermarking-project/
 ├── config/
 │ └── config.yaml # Global system configuration
@@ -128,7 +128,7 @@ digital-watermarking-project/
 │
 ├── requirements.txt
 └── README.md
-
+```
 
 ---
 

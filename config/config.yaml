@@ -1,1 +1,33 @@
 
+# ===============================
+# Digital Watermarking Config
+# ===============================
+
+# ---- Watermark settings ----
+watermark:
+  path: data/watermark/logo_binary_32.png
+  width: 32
+  height: 32
+  values: binary        # {0,1}
+  embedding_order: row_major
+
+# ---- Embedding settings ----
+embedding:
+  method: xor_bit_plane # MUST be xor_bit_plane
+  bit_plane: 1          # 0 = LSB, 1 = 2nd LSB, etc.
+  channel: 0            # OpenCV BGR: 0=B, 1=G, 2=R
+
+# ---- Image settings ----
+image:
+  color_format: BGR     # OpenCV default
+  dtype: uint8
+
+# ---- Robustness test settings ----
+attacks:
+  jpeg_quality: [95, 85, 75]
+  gaussian_noise_sigma: [2, 5, 10]
+
+# ---- Evaluation metrics ----
+evaluation:
+  psnr_threshold: 40.0  # Imperceptibility reference
+  metrics: [PSNR, BER]
